@@ -1,3 +1,5 @@
+
+
 20.times do |post|
   Post.create!(date: Date.today, details: "#{post} details content")
 end

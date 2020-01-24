@@ -1,0 +1,88 @@
+<nav class="navbar navbar-default custom-nav">
+  
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/brand-logo.png">
+      </a>
+    </nav>
+
+    
+    <div class="collapse navbar-collapse collapse2" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav pull-right">
+        <li class="">
+          <%= link_to "Home", root_path %>
+        </li>
+
+        <li class="dropdown hidden-xs">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> About
+          <span class="caret"></span>
+          </a>
+            <ul class="dropdown-menu">
+              <li class="">
+                <%= link_to "Instructors", root_path %>
+              </li>
+              <li class="">
+                <%= link_to "Fees&Enrollment", root_path %>
+              </li>
+              <li class="">
+                <%= link_to "Club Info", root_path %>
+              </li><li class="">
+                <%= link_to "Schedule", root_path %>
+              </li>
+            </ul>
+        </li>    
+        
+        <li class="">
+          <%= link_to "Contact Us", root_path %>
+        </li>
+        
+        <% if !user_signed_in? %>
+          <li class="">
+            <%= link_to "Login", new_user_session_path %>
+          </li>
+          <li class="">
+            <%= link_to "Sign Up", new_user_registration_path  %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          </li>
+          <li>
+            <%= link_to "User Page", users_path %>
+          </li>
+          <li>
+            <%= link_to "Post",  new_post_path %>
+          </li>
+        <% end %>
+        <% if user_signed_in? %>
+          <li class="dropdown hidden-xs">
+            <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Acount -->
+            <!-- <span class="caret"></span> -->
+            </a>
+              <ul class="dropdown-menu">
+                
+                <% if current_user.try(:type) == 'AdminUser' %>
+                <li>
+                  <%= link_to "Admin Dashboard", admin_root_path %>
+                </li>
+                <li class="divider">
+                </li>
+                <% end %>
+                <li>
+                  <%= link_to "Settings", edit_user_registration_path %>
+                </li>
+                
+              </ul>
+          </li>
+          <!-- <li class=" hidden-sm hidden-lg hidden-md">
+            <= link_to "Settings", edit_user_registration_path %>
+          </li> -->
+          
+        <% end %>
+          
+          
+         
+      </ul>
+    </div>
+</nav>

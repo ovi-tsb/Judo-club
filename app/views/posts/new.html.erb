@@ -1,8 +1,37 @@
-<%= form_for @post do |f| %>
+<%= form_for @post, class: "form-horizontal" do |f| %>
 
-  <%= f.date_field :date %>
-  <%= f.text_area :details %>
-  
-  <%= f.submit 'Save' %>
+  <% if @post.errors.any? %>
+    <% @post.errors.full_messages.each do |error| %>
+      <%= js add_gritter(error, title: "Judo Club Notification", sticky: false) %>
+    <% end %>
+  <% end %>
+
+  <div class="form-style-10">
+  <h1>Add Story<span></span></h1>
+  <form>
+      <div class="section"><span>1</span>Date</div>
+      <div class="inner-wrap">
+          <label>Date <%= f.date_field :date, class: "form-control" %> </label>
+          
+      </div>
+
+      <div class="section"><span>2</span>Details</div>
+      <div class="inner-wrap">
+          <label>Details <%= f.text_area :details, class: "form-control" %></label>
+      </div>
+
+      
+      <div class="button-section">
+       <%= f.submit 'Save', class: 'btn btn-primary btn-block' %>
+       <!-- <span class="privacy-policy">
+        <input type="checkbox" name="field7">You agree to our Terms and Policy. 
+       </span> -->
+      </div>
+      
+      
+  </form>
+  </div>
+
 
 <% end %>
+

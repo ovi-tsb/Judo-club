@@ -13,6 +13,75 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
- @import "posts.scss";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "posts.scss";
+
+
+@import "nav.scss";
+@import "form.scss";
+@import "static.scss";
+@import "gritter";
+@import "bourbon";
+
+
+html {
+  height: 100%;
+}
+body {
+    height: 100%;
+    background: url('guy-poses.jpg') no-repeat center center fixed;
+    /*background: url('judo-grip.jpg') no-repeat center center fixed;*/
+    -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    font-family: sans-serif;
+    margin-top: 80px;
+    padding: 30px;
+}
+.navbar-brand {
+  display: inline;
+  width:150px;
+  font-size: 24px;
+}
+.navbar-brand > img {
+  max-height: 90px;
+  margin-top: 0px;
+  display: inline;
+}
+.navbar-default {
+    background-color: rgba(246, 233, 233, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+    padding: 20px;
+}
+.navbar {
+    height: 110px;
+}
+.nav li a {
+  color: black !important;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.nav li a:hover {
+  color: grey !important;
+}
+.navbar-nav > li > .dropdown-menu a:hover {
+  /*background-color: rgba(246, 233, 233, 0.9);*/
+  color: grey !important;
+  background-color: transparent !important;
+}
+.navbar-nav > .open a:focus{
+  background-color: transparent !important;
+}
+
+

@@ -1,0 +1,37 @@
+.navbar-default {
+    height: 80px;
+}
+
+.navbar-default {
+    background-color: rgba(246, 233, 233, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+    padding: 20px;
+    z-index: 10;
+}
+
+
+.nav a{
+  display: inline;
+}
+/*header *{
+    display: inline;
+}*/
+.nav li {
+  margin: 20px;
+  display: inline;
+}
+.nav li a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+

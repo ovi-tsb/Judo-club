@@ -1,1 +1,10 @@
 <h1>First Posts</h1>
+
+<% @posts.each do |post|%>
+  <div class="well">
+    <%= post.id %>. - 
+    <%= post.date %>
+    <%= post.details %>
+  </div>
+  
+<% end %> 

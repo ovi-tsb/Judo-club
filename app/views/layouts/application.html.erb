@@ -11,8 +11,9 @@
 
   <body>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'shared/nav' %>
     <%= yield %>
+
+    <%= js add_gritter(flash[:notice], title: "Judo Club Notification", sticky: false, image: :notice) %>
   </body>
 </html>

@@ -14,6 +14,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'jquery-rails'
+gem 'simple_form'
+gem 'gritter', '~> 1.2'
+gem 'administrate', '~> 0.12.0'
+gem 'bourbon'
 
 
 

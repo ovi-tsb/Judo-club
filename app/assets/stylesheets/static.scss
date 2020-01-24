@@ -1,0 +1,244 @@
+.well {
+  margin: 20px auto;
+  -webkit-box-shadow: 4px 3px 11px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 3px 11px -2px rgba(0,0,0,0.75);
+  box-shadow: 4px 3px 11px -2px rgba(0,0,0,0.75);
+  background-color: rgba(246, 233, 233, 0.4);
+  padding: 30px;
+}
+.well h1 {
+  text-align: center;
+  font-size: 4em;
+  padding: 40px 20px;
+}
+.well h3 {
+  text-align: center;
+}
+.top-front-page {
+  margin: 0px auto;
+  padding: 30px;
+  width: 100%;
+  min-height: 100%; /* real browsers */
+}
+.top-front-page h1  {
+  text-align: center;
+  /*padding: 60px 20px;*/
+  text-shadow: 1px 3px 3px #000, 5px 5px 6px #fff;
+  font-size: 6em;
+  font-weight: 700;
+  color: #fff;
+}
+.container-full-width img {
+  -webkit-box-shadow: 9px 9px 19px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 9px 9px 19px -1px rgba(0,0,0,0.75);
+  box-shadow: 9px 9px 19px -1px rgba(0,0,0,0.75);
+}
+.top-front-page h3 {
+  text-align: center;
+  text-shadow: 1px 1px 3px #fff, 5px 5px 6px #000;
+  font-size: 3em;
+  font-weight: 500;
+  color: #000;
+  margin-top: 10% ;
+  /*padding: 60px 20px;*/
+}
+.main-container {
+  margin-top: 5%;
+  background-color: rgba(245, 245, 245, 1);
+  padding: 50px;
+}
+.about-club h1 {
+  margin-bottom: 10px;
+  margin-top: 80px;
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.about-club img{
+  margin-right: 30px;
+  max-width: 100%;
+}
+.about-club p {
+  font-size: 1.4em;
+  line-height: 40px;
+  justify-content: justify;
+}
+.row {
+  max-width: 100%;
+}
+.container-full-width {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  height: 100px;
+  margin-top: 100px;
+  left: 50%;
+  /* ***** for footer *******/
+  /*margin-bottom: -320px;*/
+}
+.founder-of-judo {
+  padding: 5px 60px;
+}
+.founder-of-judo p{
+  font-family: Times, Times New Roman, serif;
+  font-style: italic;
+  font-size: 2.4em;
+  font-weight: 550;
+}
+.autor {
+  float: right;
+}
+.autor p {
+  font-style: normal;
+  font-size: 8px;
+  font-family: Noto Sans, sans-serif;
+}
+.judo-definition img {
+  float: left;
+  margin-top: 10px;
+}
+hr.style-two {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.image-paragraph {
+  margin: 50px 5px;
+
+}
+.link {
+  font-size: 3em;
+  font-weight: 600;
+}
+.link a {
+  color: red;
+  border-bottom: 2px solid red;
+  text-decoration: none;
+}
+.sensei-team {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+.sensei-team img {
+  margin: 30px auto;
+  width: 100%;
+  height: auto;
+}
+.sensei-team-row {
+  margin: 0 auto;
+}
+.img__description {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.52);
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 400;
+  visibility: hidden;
+  opacity: 0;
+  margin: 30px 15px;
+  /* transition effect. not necessary */
+  transition: opacity .6s, visibility .5s;
+}
+.img__description h4 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.img__description p {
+  text-align: bottom;
+  /*margin-top: 50%;*/
+
+}
+
+.sensei-team:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+.pdf-download a {
+  margin: 30px 40px 0px 10px;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+.about-club h2 {
+  margin-top: 40px;
+  margin-left: 30px;
+}
+.social-link {
+  padding: 30px 50px;
+}
+.social-link h3 {
+  color: #c90404;
+  font-size: 1.9em;
+  font-weight: 550;
+  text-shadow: 1px 1px 6px #fff;
+}
+.contact-social a {
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 450;
+}
+.schedule span{
+  color: red;
+  font-weight: 500;
+}
+.schedule p {
+  font-size: 1.1em;
+}
+section.module.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.module.parallax h1{
+  text-align: center;
+  margin-top: 37%;
+  text-shadow: 1px 3px 3px #000, 5px 5px 6px #fff;
+  font-size: 6em;
+  font-weight: 700;
+  color: #fff;
+}
+.module.parallax h3 {
+  text-align: center;
+  text-shadow: 1px 3px 3px #000, 5px 5px 6px #fff;
+  font-size: 3em;
+  font-weight: 500;
+  color: #fff;
+}
+section.module.parallax-1 { 
+  /*background-image: url("two-fighters-judo.jpg");*/
+  /*background-image: url("2guy-poses-in-white-kimono.jpg");*/
+  background-image: url("judo-sport-action-cartoon.jpg");
+}
+
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#999;
+}
+
+/* IE 6 */
+* html #footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+
+.footer{
+  height: 320px;
+  background: grey;
+}
