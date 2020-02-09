@@ -48,9 +48,16 @@
           <li>
             <%= link_to "Logout", destroy_user_session_path, method: :delete %>
           </li>
-          <li>
-            <%= link_to "User Page", users_path %>
-          </li>
+          
+          <% if current_user.try(:type) == 'AdminUser' %>
+            <li>
+              <%= link_to "Admin Dashboard", admin_root_path %>
+            </li>
+          <% elsif %>
+            <li>
+              <%= link_to "User Page", users_path %>
+            </li>
+          <% end %>
           <li>
             <%= link_to "Post",  new_post_path %>
           </li>

@@ -18,6 +18,10 @@ gem 'simple_form'
 gem 'gritter', '~> 1.2'
 gem 'administrate', '~> 0.12.0'
 gem 'bourbon'
+gem 'cocoon', '~> 1.2', '>= 1.2.14'
+
+gem 'haml-rails'
+gem 'haml', '~> 5.0', '>= 5.0.4'
 
 
 

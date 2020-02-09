@@ -46,5 +46,6 @@ class UserDashboard < Administrate::BaseDashboard
     :password,
     :first_name,
     :last_name,
+    :type
   ].freeze
 end
