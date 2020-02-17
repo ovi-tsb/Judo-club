@@ -19,9 +19,11 @@ gem 'gritter', '~> 1.2'
 gem 'administrate', '~> 0.12.0'
 gem 'bourbon'
 gem 'cocoon', '~> 1.2', '>= 1.2.14'
-
+gem 'carrierwave', '~> 0.11.2'
 gem 'haml-rails'
 gem 'haml', '~> 5.0', '>= 5.0.4'
+gem 'filterrific', '~> 2.1', '>= 2.1.2'
+gem 'pundit', '~> 2.1'
 
 
 

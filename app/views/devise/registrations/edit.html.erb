@@ -10,7 +10,12 @@
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
-      <div class="section"><span>2</span>New Password</div>
+      <div class="section"><span>2</span>Name</div>
+      <div class="inner-wrap">
+        <label>First Name <%= f.text_field :first_name, class: "form-control", autofocus: true, autocomplete: "email" %></label>
+        <label>Last Name <%= f.text_field :last_name, class: "form-control", autofocus: true, autocomplete: "email" %></label>
+      </div>
+      <div class="section"><span>3</span>New Password</div>
       <div class="inner-wrap">
             
         <label>
@@ -27,7 +32,7 @@
             
       </div>
 
-      <div class="section"><span>2</span>Old Password</div>
+      <div class="section"><span>4</span>Old Password</div>
       <div class="inner-wrap">
         <label><i>(we need your current password to confirm your changes)</i><br />
           <%= f.password_field :current_password, autocomplete: "current-password" %>

@@ -47,9 +47,14 @@
   background-color: rgba(245, 245, 245, 1);
   padding: 50px;
 }
+.main-container h1 {
+  padding-top: 120px; 
+  margin-top: -120px;
+
+}
 .about-club h1 {
   margin-bottom: 10px;
-  margin-top: 80px;
+  margin-top: 0px;
   font-size: 3em;
   font-weight: 700;
   text-align: center;

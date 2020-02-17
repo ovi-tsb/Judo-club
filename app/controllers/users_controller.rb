@@ -3,16 +3,58 @@ class UsersController < ApplicationController
 
   def index
     @user = current_user
+    @members = Member.all
     # @member = Member.find(params[:id])
     # authorize @member
     # @members = current_user.member
+    # @users = User.all
+    @users = User.all
+    
+    # if current_user.try(:type) == 'AdminUser'
+    #   @user = User.all
+    # else
+    #   @user = current_user
+    # end
+    
+    @filterrific = initialize_filterrific(
+      # to have jobs_by(current_user) in filteriffic
+      # Invoice.joins(:job).where(:jobs => {:user_id => current_user})
+      # User.joins(:member),
+      User.all,
+      params[:filterrific],
+      select_options: {
+        # jobs_by: Job.jobs_by current_user ,
+        sorted_by: User.options_for_sorted_by,
+        with_status: User.options_for_select
+      }
+    ) or return
+    @users = @filterrific.find.page(params[:page])
+
+    respond_to do |format|
+         format.html
+         format.js
+       end
+  end
+
+  def create
+    @user = User.new(user_params)
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.json { render :show, status: :created, location: @user }
+      else
+        format.html { render :new }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def show
     @member = Member.find(params[:id])
     authorize @member
-    @members = current_user.member
-    
+    @members = Member.all
+    # @member = Member.all
+    @user = User.all
   end
 
   def edit
@@ -23,6 +65,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = User.find(params[:id])
     respond_to do |format|
           if @user.update(user_params)
             # if current_user&.subscribed?
@@ -45,7 +88,8 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:email, :first_name, :last_name,
-                                  members_attributes: [:id, :first_name, :last_name, :birth_year, :_destroy])
+                                  members_attributes: [:id, :first_name, :last_name, :birth_year,
+                                  :status, :_destroy])
     end
 
     def set_user

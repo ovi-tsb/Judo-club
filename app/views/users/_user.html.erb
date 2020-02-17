@@ -1,0 +1,38 @@
+<% @user.members.each do |member| %>
+<tr>
+  
+  <td>
+    <%= user.id %>
+  </td>
+  
+  <td class='hidden-xs'>
+    <%= user.created_at.strftime("%b %d, %Y") %>
+  </td>
+  <td class='hidden-xs'>
+    <%= user.first_name %> <%= user.last_name %>
+  </td>
+  <td class='hidden-xs'>
+    <%= member.first_name %> <%= member.last_name %>
+  </td>
+  <td>
+    <%= user.email %>
+  </td>
+  
+  
+  <td class='hidden-xs'>
+    
+      <%= member.status %>
+    
+  </td>
+  <td>
+    <!-- <= link_to (status_label job.status), job %> -->
+  </td>
+  <td class='hidden-xs'>
+    <!-- <= link_to "", edit_job_path(job), id: "edit_#{job.id}", class: 'glyphicon glyphicon-pencil index-icons' if job.status != 'job_done' && job.status != 'paid' %> -->
+  </td>
+  <td class='hidden-xs'>
+    <!-- <= link_to "", job_path(job), method: :delete, id: "delete_job_#{job.id}_from_index", class: 'glyphicon glyphicon-trash index-icons', data: {confirm: 'Are you sure ?'} %> -->
+  </td>
+  
+</tr>
+<% end %>

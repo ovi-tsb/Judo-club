@@ -1,0 +1,46 @@
+.well.filter_well  
+  = form_for_filterrific( @filterrific, url: users_path, html: { id: :manual_filterrific_form } ) do |f|
+    .row.form-group
+      .col-md-2.col-sm-2.col-xs-6.chardin_box{ :'data-position' => 'top', :'data-intro' => 'Search by first name, last name, or email.' }
+        %label Search
+        = f.text_field :search_query,:class => 'filterrific-periodically-observed form-control'
+        
+      .col-md-2.col-xs-6.chardin_box{ :'data-position' => 'top', :'data-intro' => 'Filter by registration date.' }
+        %label Job Date
+        = f.text_field :with_date, autocomplete: 'off', :class => 'js-datepicker datepiker1 form-control filterrific-periodically-observed'
+      .col-md-2.col-sm-2.col-xs-6.chardin_box{ :'data-position' => 'top', :'data-intro' => 'Filter by status.' }
+        %label Status
+        = f.select(:with_status, @filterrific.select_options[:with_status], { :include_blank => '- Any -' },{ :class => 'form-control' })
+      ///////////////                         
+      .col-md-3.col-xs-6.chardin_box{ :'data-position' => 'top', :'data-intro' => 'Change the sorting.' }
+        %label Sorted by
+        = f.select :sorted_by, @filterrific.select_options[:sorted_by],{},{ :class => 'form-control filterrific-periodically-observed' } 
+      //////////
+     
+      .col-md-1.col-xs-6.filter_button
+        %label 
+        .form-group.chardin_box{ :'data-position' => 'top'}    
+          = f.submit "Search",{ :class => 'btn btn-sm btn-primary ' }
+    
+      .col-md-1.col-xs-6.filter_button
+        %label
+        .form-group.chardin_box{ :'data-position' => 'bottom', :'data-intro' => 'Reset the filter settings to defaults.' }
+          = link_to "Reset filters", reset_filterrific_url, :class => 'btn btn-warning btn-sm'
+           
+    .row
+      .col-md-4.pull-left
+        / = page_entries_info @users 
+
+  :javascript
+    $('.js-datepicker').datepicker({
+      autoclose: true,
+      todayHighlight: true,
+      orientation: "auto",
+      format: 'yyyy-mm-dd',
+      disableTouchKeyboard: true,
+      enableOnReadonly: true
+    });
+    $('#overlayTrigger').click(function(event) {
+      event.preventDefault();
+      $('body').chardinJs('start');
+    });  

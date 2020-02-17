@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require gritter
 //= require cocoon
+//= require filterrific/filterrific-jquery
 //= require turbolinks
 //= require_tree .
 
@@ -54,7 +55,24 @@ $(document).ready(function(){
     }
 });
 // for change nav bg on scroll
-
+// for change nav bg on scroll post index
+$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('.top-posts');
+   var offset = startchange.offset();
+    if (startchange.length){
+     $(document).scroll(function() { 
+        scroll_start = $(this).scrollTop();
+        if(scroll_start > offset.top) {
+            $(".navbar-default").css('background-color', '#f0f0f0');
+         } else {
+            // $('.navbar-default').css('background-color', 'transparent');
+            $('.navbar-default').css('background-color', 'rgba(246, 233, 233, 0.4');
+         }
+     });
+    }
+});
+// for change nav bg on scroll
 
 
 

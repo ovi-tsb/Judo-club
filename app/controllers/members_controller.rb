@@ -2,7 +2,7 @@ class MembersController < ApplicationController
   before_action :set_member, only: [:show, :edit, :update, :destroy]
 
   def index
-
+    # @member = Member.all
   end
 
   def new
@@ -41,10 +41,13 @@ class MembersController < ApplicationController
   end
 
   def show
+     @member = Member.all
   end
 
   def destroy
-    
+  end
+
+  def edit 
   end
 
 private
@@ -55,7 +58,8 @@ private
     params.require(:member).permit( :first_name,
                                   :last_name,
                                   :birth_year,
-                                  :user_id 
+                                  :user_id,
+                                  :status
                                 )
   end
 end

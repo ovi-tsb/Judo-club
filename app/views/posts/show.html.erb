@@ -1,3 +1,12 @@
-<div class="well">
-  <%= @post.inspect %>
+<div class="well-post">
+  <h2><%= @post.title %></h2>
+  <small><%= @post.created_at %></small>
+  <hr>
+  <p class="post_image">
+    <%= image_tag(@post.postimage_url)  if @post.postimage?%>
+  </p>
+  <p>
+    <%= @post.details %>
+  </p>
+  
 </div>

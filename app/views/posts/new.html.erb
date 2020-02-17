@@ -9,10 +9,14 @@
   <div class="form-style-10">
   <h1>Add Story<span></span></h1>
   <form>
-      <div class="section"><span>1</span>Date</div>
+      <div class="section"><span>1</span>Title</div>
       <div class="inner-wrap">
-          <label>Date <%= f.date_field :date, class: "form-control" %> </label>
-          
+          <label>Title <%= f.text_field :title, class: "form-control" %> </label>
+      </div>
+
+      <div class="section"><span>2</span>Image</div>
+      <div class="inner-wrap">
+        <label>Image <%= f.file_field :postimage, multiple: true , class: "form-control" %> </label>
       </div>
 
       <div class="section"><span>2</span>Details</div>

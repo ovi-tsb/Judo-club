@@ -1,3 +1,58 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.well-post {
+  margin-top: 3%;
+  -webkit-box-shadow: 4px 3px 11px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 3px 11px -2px rgba(0,0,0,0.75);
+  box-shadow: 4px 3px 11px -2px rgba(0,0,0,0.75);
+  background-color: rgba(246, 233, 233, 0.9);
+  padding: 5px 30px;
+}
+.top-posts {
+  margin: 0px auto;
+  padding: 30px;
+  width: 100%;
+}
+.top-posts h3 {
+  text-align: center;
+  text-shadow: 1px 1px 3px #fff, 5px 5px 6px #000;
+  font-size: 5em;
+  font-weight: 500;
+  color: #000;
+  margin-top: 6% ;
+}
+.post-image-left img {
+  max-height: 450px;
+  float: left;
+  margin-left: 1em;
+  margin-right: 1em;  
+  margin-top: 0px;
+}
+.post-image-right img {
+  max-height: 450px;
+  float: right;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0px;
+}
+.post-height {
+  margin-top: 30px;
+}
+.post-height p{
+  margin-left: 30px;
+}
+.h-post {
+  float: left;
+  margin-left: 30px;
+  text-decoration: underline;
+}
+.small-post {
+  float: right;
+  margin-top: 25px;
+}
+
+
+
+
+
