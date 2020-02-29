@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default custom-nav">
   
     <nav class="navbar navbar-light bg-light">
-      <%= link_to image_tag("/assets/brand-logo.png", alt: "logo"), root_path, class: 'navbar-brand' %>
+      <%= link_to image_tag("s3://mississaugajudo/brand-logo.png", alt: "logo"), root_path, class: 'navbar-brand' %>
     </nav>
 
     
@@ -16,25 +16,47 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"> About
           <span class="caret"></span>
           </a>
-            <ul class="dropdown-menu">
-              <li class="">
-                <%= link_to "Club News", posts_path %>
-              </li>
-              <li class="">
-                <%= link_to "Instructors", root_path(anchor: 'instructors') %>
-              </li>
-              <li class="">
-               <%= link_to "Fees&Enrollment", root_path(anchor: 'fees') %>
-              </li>
-              <li class="">
-                <%= link_to "Club Info", root_path(anchor: 'info') %>
-              </li><li class="">
-                <%= link_to "Schedule", root_path(anchor: 'schedule') %>
-              </li>
-              <li class="">
-                <%= link_to "Contact Us", root_path(anchor: 'contact') %>
-              </li>
-            </ul>
+            <% if user_signed_in? %>
+              <ul class="dropdown-menu">
+                <li class="">
+                  <%= link_to "Club News", posts_path %>
+                </li>
+                <li class="">
+                  <%= link_to "Instructors", static_homepage_path(anchor: 'instructors') %>
+                </li>
+                <li class="">
+                 <%= link_to "Fees&Enrollment", static_homepage_path(anchor: 'fees') %>
+                </li>
+                <li class="">
+                  <%= link_to "Club Info", static_homepage_path(anchor: 'info') %>
+                </li><li class="">
+                  <%= link_to "Schedule", static_homepage_path(anchor: 'schedule') %>
+                </li>
+                <li class="">
+                  <%= link_to "Contact Us", static_homepage_path(anchor: 'contact') %>
+                </li>
+              </ul>
+            <% else %>
+              <ul class="dropdown-menu">
+                <li class="">
+                  <%= link_to "Club News", posts_path %>
+                </li>
+                <li class="">
+                  <%= link_to "Instructors", root_path(anchor: 'instructors') %>
+                </li>
+                <li class="">
+                 <%= link_to "Fees&Enrollment", root_path(anchor: 'fees') %>
+                </li>
+                <li class="">
+                  <%= link_to "Club Info", root_path(anchor: 'info') %>
+                </li><li class="">
+                  <%= link_to "Schedule", root_path(anchor: 'schedule') %>
+                </li>
+                <li class="">
+                  <%= link_to "Contact Us", root_path(anchor: 'contact') %>
+                </li>
+              </ul>
+            <% end %>
         </li> 
         
         <% if !user_signed_in? %>
@@ -50,6 +72,9 @@
           </li>
           
           <% if current_user.try(:type) == 'AdminUser' %>
+            <li>
+              <%= link_to "Members", members_path %>
+            </li>
             <li>
               <%= link_to "Admin Dashboard", admin_root_path %>
             </li>

@@ -1,4 +1,4 @@
-<%= form_for @post, class: "form-horizontal" do |f| %>
+<%= form_for @post, html: { multipart: true }, class: "form-horizontal" do |f| %>
 
   <% if @post.errors.any? %>
     <% @post.errors.full_messages.each do |error| %>
@@ -16,20 +16,16 @@
 
       <div class="section"><span>2</span>Image</div>
       <div class="inner-wrap">
-        <label>Image <%= f.file_field :postimage, multiple: true , class: "form-control" %> </label>
+        <label>Image <%= f.file_field :postimage, class: "form-control" %> </label>
       </div>
 
       <div class="section"><span>2</span>Details</div>
       <div class="inner-wrap">
           <label>Details <%= f.text_area :details, class: "form-control" %></label>
       </div>
-
       
       <div class="button-section">
-       <%= f.submit 'Save', class: 'btn btn-primary btn-block' %>
-       <!-- <span class="privacy-policy">
-        <input type="checkbox" name="field7">You agree to our Terms and Policy. 
-       </span> -->
+        <%= f.submit 'Save', class: 'btn btn-primary btn-block' %>
       </div>
       
       

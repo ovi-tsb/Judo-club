@@ -11,7 +11,7 @@
       </p>
       
     </div>
-    <div class="post-height row">    
+    <div class="post-height row">
       <% if post.id.odd? %>
         <figure class="post-image-left">
           <%= image_tag(post.postimage_url) if post.postimage? %>
@@ -26,9 +26,10 @@
       </p>
     </div>  
       <br>
-    <%= link_to "Delete", post_path(post), method: :delete, id: "delete_post_#{post.id}_from_index", class: 'btn btn-danger btn-sm', data: {confirm: 'Are you sure ?'} %> | 
-    <%= link_to "Edit", edit_post_path(post), id: "edit_#{post.id}", class: 'btn btn-default btn-sm'  %> 
-    
+    <% if current_user.try(:type) == 'AdminUser'%>  
+      <%= link_to "Delete", post_path(post), method: :delete, id: "delete_post_#{post.id}_from_index", class: 'btn btn-danger btn-sm', data: {confirm: 'Are you sure ?'} %> | 
+      <%= link_to "Edit", edit_post_path(post), id: "edit_#{post.id}", class: 'btn btn-default btn-sm'  %> 
+    <% end %>
     <hr class="style-two">
     
   <% end %> 

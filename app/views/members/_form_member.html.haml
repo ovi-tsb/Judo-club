@@ -1,0 +1,14 @@
+= form_for @member do |f|
+  - if @member.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@member.errors.count, "error")} prohibited this item from being saved:"
+      %ul
+        - @member.errors.full_messages.each do |message|
+          %li= message
+  .nested-fields
+    = f.fields_for :members, @member do |f| 
+      = render 'member_fields', f: f 
+    / .add-member
+    /   = link_to_add_association '+ Add Member', f, :members, class: ''
+  %br
+  = f.submit 'Save changes', class: 'btn btn-primary' 

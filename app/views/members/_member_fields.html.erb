@@ -1,18 +1,23 @@
 <div class="nested-fields row new-item">
-  <div class="form-group col-sm-4">
+  <div class="form-group col-sm-3">
     <%= f.label :first_name, 'Name', class: "control-label" %> 
     <%= f.text_field :first_name,:class => 'form-control' %>
   </div>
-  <div class="form-group col-sm-4 col-xs-6">
+  <div class="form-group col-sm-3 col-xs-6">
     <%= f.label :last_name, 'Last Name', class: "control-label" %>
     <%= f.text_field :last_name,:class => 'form-control' %>
   </div>
-  <div class="form-group col-sm-2 col-xs-4">
+  <div class="form-group col-sm-3 col-xs-4">
     <%= f.label :birth_year, class: "control-label" %> 
     <%= f.number_field :birth_year,:class => 'form-control', :type => "number" %>
   </div>
-  <div class="form-group col-sm-2 col-xs-2">
-    <%= link_to_remove_association "", f,  class: 'glyphicon glyphicon-trash index-icons' %>
+  <div class="form-group col-sm-2 col-xs-4">
+    <%= f.label :activ %>
+    <label class="switch">
+    <%= f.check_box :status,{}, "active", "inactive" %>
+    <span class="slider round">
+    </span>
+    </label>
   </div>
- 
+  
 </div>

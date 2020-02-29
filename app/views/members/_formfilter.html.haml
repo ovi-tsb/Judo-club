@@ -1,0 +1,39 @@
+.well.filter_well  
+  = form_for_filterrific( @filterrific, url: members_path, html: { id: 'filterrific-no-ajax-auto-submit' } ) do |f|
+    .row.form-group
+      .col-md-2.col-sm-2.col-xs-6.chardin_box{ :'data-position' => 'top', :'data-intro' => 'Search by first name, last name, or email.' }
+        %label Search by Name
+        = f.text_field :search_query, class: ' form-control'
+      
+      .col-md-2.col-sm-2.col-xs-6.chardin_box{ :'data-position' => 'top', :'data-intro' => 'Filter by status.' }
+        %label Status
+        = f.select(:with_status, @filterrific.select_options[:with_status], { :include_blank => '- Any -' },{ :class => 'form-control' })
+
+      .col-md-2.col-sm-2.col-xs-6.chardin_box{ :'data-position' => 'top', :'data-intro' => 'Filter by status.' }
+        %label Payment
+        = f.select(:with_pay_status, @filterrific.select_options[:with_pay_status], { :include_blank => '- Any -' },{ :class => 'form-control' })
+      ///////////////                         
+      .col-md-3.col-xs-6.chardin_box{ :'data-position' => 'top', :'data-intro' => 'Change the sorting.' }
+        %label Sorted by
+        = f.select :sorted_by, @filterrific.select_options[:sorted_by],{},{ :class => 'form-control ' } 
+      //////////
+     
+      .col-md-1.col-xs-6.filter_button
+        %label 
+        .form-group.chardin_box{ :'data-position' => 'top'}    
+          = f.submit "Search",{ :class => 'btn btn-sm btn-primary ' }
+    
+      .col-md-1.col-xs-6.filter_button
+        %label 
+        .form-group.chardin_box{ :'data-position' => 'bottom', :'data-intro' => 'Reset the filter settings to defaults.' }
+          = link_to "Reset filters", reset_filterrific_url, :class => 'btn btn-warning btn-sm'
+           
+    .row
+      .col-md-4.pull-left
+        / = page_entries_info @members 
+
+  :javascript
+    $('#overlayTrigger').click(function(event) {
+      event.preventDefault();
+      $('body').chardinJs('start');
+    });  

@@ -3,9 +3,16 @@ Rails.application.routes.draw do
       resources :users
       resources :posts
       resources :admin_users
+      resources :members
 
       root to: "users#index"
     end
+
+    authenticated do
+      root :to => 'users#index'
+      get 'static/homepage' => 'static#homepage'
+    end
+    
   resources :posts
   resources :members
   devise_for :users
@@ -13,5 +20,6 @@ Rails.application.routes.draw do
   resources :users
 
   root to: 'static#homepage'
+
 
 end

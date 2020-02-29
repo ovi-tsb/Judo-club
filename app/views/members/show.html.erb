@@ -1,3 +1,91 @@
-<h2>Member Show</h2>
-<%= @member.first_name %>
-<%= @member.birth_year %>
+<div class="edit-member">
+  <%= link_to "", members_path, class: 'glyphicon glyphicon-remove close-window' %> 
+  <h2>CASH or POS Payment</h2>
+  <b>
+    Payment for <%= @member.where(:status => "active").count %> active members.
+  </b>
+  <br><br>
+  <% @member.each do |member| %>
+    <% if member.user_id == member.user_id && member.status == "active" %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= member.first_name.capitalize %> <%= member.last_name.capitalize %>
+        </div>
+        <div class="col-md-1">
+          <!-- <= label_tag :checkbox, "checkbox" %>     -->
+          <%= check_box_tag("name", "value", true, disabled: true, class: "checkbox") %>
+        </div>
+        <div class="col-md-2">
+          <span style="color:green; display: inline-block;">
+            <%= member.status %>
+          </span>
+        </div>
+        <div class="col-md-3">
+          <%= link_to "", edit_member_path(member), id: "edit_#{member.id}", class: 'glyphicon glyphicon-pencil index-icons' %>
+        </div>
+      </div>
+      <br>
+    <% elsif member.user_id == member.user_id && member.status == "inactive" %>  
+      <div class="row">
+        <div class="col-md-6">
+          <%= member.first_name.capitalize %> <%= member.last_name.capitalize %>
+        </div>
+        <div class="col-md-1">
+          <!-- <= label_tag :checkbox, "checkbox" %>     -->
+          <%= check_box_tag("name", "value", false, disabled: true, class: "checkbox") %>
+        </div>
+        <div class="col-md-2">
+          <span style="color:red; display: inline-block;">
+            <%= member.status %>
+          </span>
+        </div>
+        <div class="col-md-3">
+          <%= link_to "", edit_member_path(member), id: "edit_#{member.id}", class: 'glyphicon glyphicon-pencil index-icons' %>
+        </div>
+      </div>
+      <br>
+    <% end %>
+  <% end %>
+  
+  <b>
+    Total payment per month: <%= @total_payment_month %>
+      
+    <%= case 
+      member_count = @member.where(:status => "active").count  
+      when member_count = 0
+        @total_payment_month = 0
+      when member_count = 1
+        @total_payment_month = 80 * member_count
+      when member_count = 2
+        @total_payment_month = 70 * member_count   
+      when member_count = 3
+        @total_payment_month = 60 * member_count
+      when member_count = 4
+        @total_payment_month = 55 * member_count
+      when member_count = 5 || member_count > 5
+        @total_payment_month = 50 * member_count
+    end %> 
+  </b>
+  <br><br>
+  <b>
+    Total payment for 3 months: <%= @total_payment_month * 3 %>
+  </b>
+  <br><br>
+  Amount you want to pay: <%= text_field_tag :my_input %>
+  <br><br>
+  <%= link_to "Pay", members_path, class: 'btn btn-sm btn-primary' %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

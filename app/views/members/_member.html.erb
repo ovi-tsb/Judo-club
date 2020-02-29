@@ -1,0 +1,66 @@
+<% @members.each_with_index do |member, index| %>
+  <tr>
+    <td>
+      <%= "#{index + 1}" %>
+    </td>
+    <td class='hidden-xs'>
+      <%= member.created_at.strftime("%b %d, %Y") %>
+    </td>
+    <td class='hidden-xs'>
+      <%= member.try(:user).try(:first_name).capitalize %> <%= member.try(:user).try(:last_name).capitalize %>
+    </td>
+    <td class='hidden-xs'>
+      <%= member.first_name.capitalize %> <%= member.last_name.capitalize %>
+    </td>
+    <td>
+      <% today ||= Date.current %>
+      <% age = today.year - member.birth_year %>
+      <%= age  %>
+    </td>
+
+    
+    <% if member.pay_status == 'paid' %>
+      <td>  
+        <span style="color:green"><%= member.pay_status %></span>
+      </td>
+    <% else %>
+      <td class='hidden-xs'>  
+        <span style="color:red"><%= member.pay_status %></span>
+      </td>
+    <% end %>
+    
+
+    <% if member.status == 'active' %>
+      <td>  
+        <span style="color:green"><%= member.status %></span>
+      </td>
+    <% else %>
+      <td class='hidden-xs'>  
+        <span style="color:red"><%= member.status %></span>
+      </td>
+    <% end %>
+    
+    <td>
+      <%= link_to "", edit_member_path(member), id: "edit_#{member.id}", class: 'glyphicon glyphicon-pencil index-icons' %>
+    </td>
+
+    <td>
+      <%= link_to "Pay", member_path(member), class: 'btn btn-xs btn-success' %>
+    </td>
+  </tr>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

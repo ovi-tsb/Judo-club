@@ -23,7 +23,11 @@ gem 'carrierwave', '~> 0.11.2'
 gem 'haml-rails'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'filterrific', '~> 2.1', '>= 2.1.2'
+gem 'chardinjs-rails'
 gem 'pundit', '~> 2.1'
+gem 'jquery-turbolinks'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 
 

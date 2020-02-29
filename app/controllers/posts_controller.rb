@@ -15,7 +15,7 @@ class PostsController < ApplicationController
       # @user = User.find(params[:id])
 
       if @post.save
-        redirect_to @post, notice: 'Your post was created successfully'
+        redirect_to posts_path, notice: 'Your post was created successfully'
       else
         render :new
       end
@@ -32,9 +32,11 @@ class PostsController < ApplicationController
   end
 
   def edit 
+    # authorize @post
   end
+
   def update 
-    
+    # authorize @post
     if @post.update(post_params)
       redirect_to posts_path, notice: 'Your post was updated successfully'
     else
