@@ -1,6 +1,7 @@
 <div class="top-posts">
   <h3>Club News</h3>
 </div>
+<% if @post.any? %>
 <div class="well-post">
   <% @post.each do |post|%>
     <div class="row">
@@ -34,3 +35,4 @@
     
   <% end %> 
 </div>
+<% end %>
