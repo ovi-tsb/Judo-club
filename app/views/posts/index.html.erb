@@ -2,37 +2,37 @@
   <h3>Club News</h3>
 </div>
 <% if @post.any? %>
-<div class="well-post">
-  <% @post.each do |post|%>
-    <div class="row">
-      <h2 class="h-post"><%= post.title %><%= post.id %></h2>
-      <p class="small-post">
-      By: <%= post.user.email %> at:
-      <%= post.created_at.strftime("%b/%d/%Y") %>
-      </p>
-      
-    </div>
-    <div class="post-height row">
-      <% if post.id.odd? %>
-        <figure class="post-image-left">
+  <div class="well-post">
+    <% @post.each do |post|%>
+      <div class="row">
+        <h2 class="h-post"><%= post.title %><%= post.id %></h2>
+        <p class="small-post">
+        By: <%= post.user.email %> at:
+        <%= post.created_at.strftime("%b/%d/%Y") %>
+        </p>
+        
+      </div>
+      <div class="post-height row">
+        <% if post.id.odd? %>
+          <figure class="post-image-left">
+            <%= image_tag(post.postimage_url) if post.postimage? %>
+          </figure>
+        <% else %>
+        <figure class="post-image-right">
           <%= image_tag(post.postimage_url) if post.postimage? %>
         </figure>
-      <% else %>
-      <figure class="post-image-right">
-        <%= image_tag(post.postimage_url) if post.postimage? %>
-      </figure>
-      <% end %>    
-      <p>  
-        <%= post.details %>
-      </p>
-    </div>  
-      <br>
-    <% if current_user.try(:type) == 'AdminUser'%>  
-      <%= link_to "Delete", post_path(post), method: :delete, id: "delete_post_#{post.id}_from_index", class: 'btn btn-danger btn-sm', data: {confirm: 'Are you sure ?'} %> | 
-      <%= link_to "Edit", edit_post_path(post), id: "edit_#{post.id}", class: 'btn btn-default btn-sm'  %> 
-    <% end %>
-    <hr class="style-two">
-    
-  <% end %> 
-</div>
+        <% end %>    
+        <p>  
+          <%= post.details %>
+        </p>
+      </div>  
+        <br>
+      <% if current_user.try(:type) == 'AdminUser'%>  
+        <%= link_to "Delete", post_path(post), method: :delete, id: "delete_post_#{post.id}_from_index", class: 'btn btn-danger btn-sm', data: {confirm: 'Are you sure ?'} %> | 
+        <%= link_to "Edit", edit_post_path(post), id: "edit_#{post.id}", class: 'btn btn-default btn-sm'  %> 
+      <% end %>
+      <hr class="style-two">
+      
+    <% end %> 
+  </div>
 <% end %>
