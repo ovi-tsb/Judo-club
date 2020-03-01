@@ -560,6 +560,7 @@ DEPENDENCIES
   factory_bot_rails
   filterrific (~> 2.1, >= 2.1.2)
   fog (~> 2.1)
+  fog-aws
   gritter (~> 1.2)
   haml (~> 5.0, >= 5.0.4)
   haml-rails
