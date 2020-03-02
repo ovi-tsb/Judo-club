@@ -7,7 +7,7 @@ if Rails.env.production?
       aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],        # required
       region:                ENV['S3_REGION'],
     }
-    config.fog_directory  = ENV["S3_BUCKET"]              # required
+    config.fog_directory  = ENV["S3_BUCKET_NAME"]              # required
     # config.fog_public = false
     #     config.storage = :fog
     config.fog_public     = false                                             # optional, defaults to true
