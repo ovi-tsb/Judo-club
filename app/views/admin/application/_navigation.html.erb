@@ -1,5 +1,5 @@
 <nav class="navigation" role="navigation">
-  <%= link_to "Home", root_path, class: ' navigation__link navigation__link--#{nav_link_state(resource)' %>
+  <%= link_to "Home", members_path, class: ' navigation__link navigation__link--#{nav_link_state(resource)' %>
   <% Administrate::Namespace.new(namespace).resources.each do |resource| %>
     <%= link_to(
       display_resource_name(resource),

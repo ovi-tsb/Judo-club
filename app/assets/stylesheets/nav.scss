@@ -1,31 +1,45 @@
-.navbar-default {
-    height: 80px;
+.navbar-inverse {
+  background-color: rgba(246, 233, 233, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  align-items: center;
+  box-shadow: 0 0 25px 0 black;
+  padding: 20px;
+  z-index: 14;
 }
-
-.navbar-default {
-    background-color: rgba(246, 233, 233, 0.4);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 0 25px 0 black;
-    padding: 20px;
-    z-index: 10;
+.navbar-brand {
+  margin-top: -25px;
 }
-
-
+.dropdown-menu {
+  margin-top: 28px !important;
+}
+.dropdown-menu li a{
+  line-height: 40px;
+}
+.nav {
+  vertical-align: middle;
+  /*border: 1px solid red;*/
+  float: right;
+}
 .nav a{
   display: inline;
+}
+.collapse, .nav {
+  background-color: transparent !important;
 }
 /*header *{
     display: inline;
 }*/
 .nav li {
-  margin: 20px;
-  display: inline;
+  /*margin: 20px;
+  display: inline;*/
+  margin-top: 10px;
+  display:inline;
+  vertical-align:middle;
+  line-height:80px;
 }
 .nav li a {
   color: black;
@@ -33,5 +47,160 @@
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   font-weight: 800;
+  font-size: 1.1em;
 }
+
+ /* ///////////drop down animation with pure css/////////*/
+/*.dropdown {
+    .dropdown-menu {
+        transition: all 0.5s;
+        overflow: hidden;
+        transform-origin: top center;
+        transform: scale(1,0);
+        display: block;
+    }
+    &:hover {
+        .dropdown-menu {
+            transform: scale(1);
+        }
+    }
+}*/
+
+/* ///////////drop down animation with pure css/////////*/
+
+nav.navbar.shrink {
+  max-height: 80px;
+  .navbar-brand img {
+    max-height: 65px;
+  }
+  .dropdown-menu {
+    margin-top: 13px !important;
+  }
+  .dropdown-menu ul  {
+    background-color: rgba(234, 234, 234, 0.9) !important;
+    margin-right: 0 !important;
+  }
+  .collapse ul, .nav {
+    /*background-color: transparent !important;*/
+  }
+  .nav li {
+    margin-top: -5px;
+    vertical-align:middle;
+    line-height:0px;
+  }
+}
+.navbar-brand img {
+  // Animation
+     -webkit-transition: all 0.4s ease;
+     transition: all 0.4s ease;
+}
+/*nav.navbar {
+  
+   // Animation
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+.dropdown-menu,
+.dropdown-menu li,
+.dropdown-menu li a{
+  // Animation
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}*/
+
+/* ----------  @media only screen  --------------- */
+/* ----------  -----------------  --------------- */
+/* ----------  -----------------  --------------- */
+/* ----------  -----------------  --------------- */
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-inverse {
+    width: 100% !important;
+  }
+  .navbar-toggle {
+    margin-top: 15px;
+    border: 1px solid #B1C5C4 !important;
+    background:  center center no-repeat #D90E0C !important;
+  }
+  .navbar-toggle:hover {
+    background:  center center no-repeat #656464 !important;
+  }
+  .navbar-toggler-right .icon-bar {
+    background-color: #fff !important;
+  }
+  .navbar-brand {
+    margin-left: -20px;
+  }
+  .navbar-collapse ul {
+    z-index: 10;
+    width:190px;
+  }
+  .navbar-collapse {
+    background-color: rgba(234, 234, 234, 0.9) !important;
+    float: right;
+    margin-top: 31px;
+    margin-left: 20px;
+    z-index: 2;
+    min-width: 200px !important;
+    margin-right: -35px !important;
+  }
+  .dropdown-menu {
+    margin-top: 13px !important;
+
+    position: absolute;
+          top: 0;
+          bottom: 0;
+          background-color: #ddd;
+          min-height: 100%;
+  }
+  .navbar-collapse li a{
+    line-height: 30px !important;
+    
+  }
+  .open .dropdown-menu {
+    background-color: transparent !important;
+  }
+  .navbar-inverse .navbar-nav .dropdown-menu > li > a {
+      /*color: #9d9d9d;*/
+      /*display: inline !important;*/
+    }
+  nav.navbar.shrink {
+    
+    .navbar-collapse {
+      margin-top: 12px;
+      background-color: rgba(234, 234, 234, 1) !important;
+    }
+    .navbar-nav ul  {
+      /*border:1px solid red !important;*/
+    }
+    .navbar-toggle {
+      margin-top: 4px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+ 
+
+}
+/* ----------  @media only screen  --------------- */
+/* ----------  -----------------  --------------- */
+/* ----------  -----------------  --------------- */
+/* ----------  -----------------  --------------- */
+
+
+
+
+
+
+
+
+
+
 

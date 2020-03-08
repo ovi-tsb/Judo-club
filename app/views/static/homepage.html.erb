@@ -7,13 +7,13 @@
 <div class="container-full-width">
   <div class="main-container">
     <div class="about-club">
-      <h1>ABOUT OUR CLUB</h1>
+      <h1 id="about">ABOUT OUR CLUB</h1>
       <hr class="style-two">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8 col-xs-12 col-sm-12">
           <p>The Shin Bu Kan Judo club traces its history to the Etobicoke Olympium in 1982 where Sensei Goki Uemura (8thDan, Judo Hall of Fame). A few later, the club was turning out Canadian champions at competitions in Brazil, France, England, Japan, Poland, and Egypt.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-xs-12 col-sm-12">
           <%= image_tag "Goki_Uemura.jpg" %>
         </div>
       </div>
@@ -22,15 +22,23 @@
       <div>
         <div class="founder-of-judo">
           <p>"For one thing, Judo in reality is not a mere sport or game. I regard it as a principle of life, art and science. In fact, it is a means for personal cultural attainment."</p>
-
-          
         </div>
-        <p class="autor"> - THE FOUNDER OF JUDO, MASTER JIGORO KANO</p>
+        <div class="autor">
+          <p> - THE FOUNDER OF JUDO, MASTER JIGORO KANO</p>
+        </div>
+        
       </div>
       <br><br><br><br>
       <div>
-
-        <p class="judo-definition"><%= image_tag "jigoro.jpg" %>Judo (the "gentle way") was developed by Professor Jigoro Kano in 1882. More than martial art, it is a form of physical, intellectual, and moral education based on the principles of maximum efficiency with minimum effort ("seiryoku zenyo") and mutual welfare and benefit ("jita kyoei"). Derived from jiujitsu, modern day judo techniques consist of throws ("nage waza") and grappling controls ("kateme waza").Today, judo is an Olympic sport and is practiced in over 195 countries around the world.</p> 
+        <div class="row judo-definition">
+          <div class="col-md-4 col-xs-12 col-sm-12">
+            <%= image_tag "jigoro.jpg" %>
+          </div>
+          <div class="col-md-8 col-xs-12 col-sm-12">
+            <p>Judo (the "gentle way") was developed by Professor Jigoro Kano in 1882. More than martial art, it is a form of physical, intellectual, and moral education based on the principles of maximum efficiency with minimum effort ("seiryoku zenyo") and mutual welfare and benefit ("jita kyoei"). Derived from jiujitsu, modern day judo techniques consist of throws ("nage waza") and grappling controls ("kateme waza").Today, judo is an Olympic sport and is practiced in over 195 countries around the world.</p>
+          </div>
+        </div>
+         
       </div>
       <h1 id="info">OUR STORY</h1>
       <hr class="style-two">
@@ -54,7 +62,6 @@
               The club is an official member of Judo Ontario and students have the opportunity to participate in all tournaments.
           </p>
         </div>
-          
       </div>
       <h1>JOIN OUR TEAM</h1>
       <hr class="style-two">
@@ -77,10 +84,12 @@
       </div>
       <h1 id="instructors">OUR TALENTED INSTRUCTORS</h1>
       <hr class="style-two">
-      <p>
-        We are privileged to draw on the many years of experience and expertise of our instructors. They volunteer many hours during the week and weekends to teach our students. They are well qualified to coach our students in all aspects of judo.
-      </p><br>
-      <div class="row sensei-team-row">
+      <div class="row image-paragraph">
+        <p class="col-md-6">
+          We are privileged to draw on the many years of experience and expertise of our instructors. They volunteer many hours during the week and weekends to teach our students. They are well qualified to coach our students in all aspects of judo.
+        </p>
+      </div>
+      <div class="row">
         <div class="col-md-4 col-sm-6 col-xs-12 sensei-team">
           <%= image_tag "judo-sensei01.jpg" %>
           <div class="img__description">
@@ -179,8 +188,8 @@
       </div>
       <h1 id="schedule">JUDO CLASSES</h1>
       <hr class="style-two">
-      <div>
-        <p>
+      <div class="row">
+        <p class="col-md-6">
           We offer a mix of classes for kids and adults. Our kids classes are for children ages 5 - 12. Children 12+ can join our adult classes. Sunday classes are for our high performance athletes and are by invitation only.
         </p>
       </div>
@@ -209,8 +218,8 @@
         </div>
       </div>
       <h2>ENROLLMENT</h2>
-      <div>
-        <p>
+      <div class="row">
+        <p class="col-md-12">
           All enrollment must be done in person. Before visiting us, please print, complete, and sign the form(s) below:
         </p>
         <div class="pdf-download">
@@ -219,7 +228,6 @@
           <%= link_to 'Fees (PDF)', asset_path('Shin-Bu-Kan-Fees.pdf', skip_pipeline: true), target: "_blank" %>
         </div>
       </div> 
-      <hr class="style-two">
       
     </div>
   </div>
