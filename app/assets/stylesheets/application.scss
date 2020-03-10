@@ -41,20 +41,6 @@ body {
     margin-top: 80px;
     padding: 30px;
 }
-body:after{
-      content:"";
-      position:fixed; /* stretch a fixed position to the whole screen */
-      top:0;
-      height:100vh; /* fix for mobile browser address bar appearing disappearing */
-      left:0;
-      right:0;
-      z-index:-1; /* needed to keep in the background */
-      background: url("https://mississaugajudo.s3.us-east-2.amazonaws.com/guy-poses.jpg") no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-}
 .navbar-brand {
   display: inline;
   width:150px;
@@ -136,11 +122,7 @@ h1:focus, h3:focus {
 @media only screen and (max-width: 767px) {
   
   body {
-    background: url("https://mississaugajudo.s3.us-east-2.amazonaws.com/guy-poses.jpg") no-repeat 15% 0 fixed;
-    -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;  
+    background-attachment:initial; 
   }
 
 }
