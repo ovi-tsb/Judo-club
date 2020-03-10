@@ -422,6 +422,9 @@ section.module.parallax {
     height: 520px;
     background: grey;
   }
+  section.module.parallax {
+    background-attachment:initial;
+  }
 
 }
 
