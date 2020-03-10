@@ -20,6 +20,10 @@
   width: 100%;
   min-height: 100%; /* real browsers */
 }
+/* //// for right margin on mobile ////     */
+.top-front-page {
+  overflow-x: hidden;
+}
 .top-front-page h1  {
   text-align: center;
   /*padding: 60px 20px;*/
