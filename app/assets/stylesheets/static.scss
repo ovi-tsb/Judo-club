@@ -347,10 +347,13 @@ section.module.parallax {
 @media only screen and (max-width: 500px) {
   .top-front-page h3 {
     font-size: 2.4em;
-    margin-top: 50%;
+    margin-top: 35%;
   }
   .top-front-page h1  {
     font-size: 3.2em;
+  }
+  .container-full-width {
+    margin-top: -50px;
   }
   .about-club, .main-container {
     min-width: 100% !important;
