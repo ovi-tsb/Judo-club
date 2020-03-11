@@ -26,11 +26,13 @@
 }
 .top-front-page h1  {
   text-align: center;
-  /*padding: 60px 20px;*/
   text-shadow: 1px 3px 3px #000, 5px 5px 6px #fff;
-  font-size: 6em;
-  font-weight: 700;
-  color: #fff;
+  font-size: 3.7em;
+  font-weight: 800;
+  color: #D90E0C;
+  font-family:Georgia,serif;
+  font-variant: small-caps; 
+  text-transform: none; 
 }
 .container-full-width img {
   -webkit-box-shadow: 9px 9px 19px -1px rgba(0,0,0,0.75);
@@ -39,10 +41,10 @@
 }
 .top-front-page h3 {
   text-align: center;
-  text-shadow: 1px 1px 3px #fff, 5px 5px 6px #000;
+  text-shadow: 1px 1px 3px #000, 5px 5px 6px #000;
   font-size: 3em;
   font-weight: 500;
-  color: #000;
+  color: #e5e5e5;
   margin-top: 10% ;
   /*padding: 60px 20px;*/
 }
@@ -52,16 +54,16 @@
   padding: 50px;
 }
 .main-container h1 {
-  padding-top: 120px; 
-  margin-top: -120px;
+  /*padding-top: 120px; */
+  /*margin-top: -120px;*/
 
 }
 .about-club h1 {
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;
   margin-top: 0px;
   font-size: 3em;
   font-weight: 700;
-  text-align: center;
+  text-align: center;*/
 }
 
 .about-club img{
@@ -92,8 +94,9 @@
 .founder-of-judo p{
   font-family: Times, Times New Roman, serif;
   font-style: italic;
-  font-size: 2.4em;
+  font-size: 2.0em;
   font-weight: 550;
+  text-align: center;
 }
 .autor {
   float: right;
@@ -105,7 +108,7 @@
 }
 .judo-definition img {
   float: left;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 hr.style-two {
     border: 0;
@@ -115,14 +118,15 @@ hr.style-two {
 .image-paragraph {
   margin: 50px 5px;
 }
-.link {
-  font-size: 3em;
-  font-weight: 600;
+.link li {
+  margin:0 0 20px 0; 
 }
-.link a {
+.link li a {
   color: red;
   border-bottom: 2px solid red;
   text-decoration: none;
+  font-size: 1.4em;
+  font-weight: 500;
 }
 .sensei-team {
   margin-left: auto;
@@ -160,14 +164,18 @@ hr.style-two {
   font-weight: 500;
 }
 .img__description p {
-  text-align: bottom;
-  /*margin-top: 50%;*/
-
+  line-height: 19px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #fff;
 }
 
 .sensei-team:hover .img__description {
   visibility: visible;
   opacity: 1;
+}
+.pdf-download li {
+  margin: 20px;
 }
 .pdf-download a {
   margin: 30px 40px 0px 10px;
@@ -198,6 +206,7 @@ hr.style-two {
 }
 .schedule p {
   font-size: 1.1em;
+  line-height: 10px;
 }
 section.module.parallax {
   height: 600px;
@@ -215,8 +224,8 @@ section.module.parallax {
   text-align: center;
   margin-top: 37%;
   text-shadow: 1px 3px 3px #000, 5px 5px 6px #fff;
-  font-size: 6em;
-  font-weight: 700;
+  font-size: 3.4em;
+  font-weight: 600;
   color: #fff;
 }
 .module.parallax h3 {
@@ -345,12 +354,36 @@ section.module.parallax {
 /*/////////////////////////////////////////////
 ///////////////////////////////////////////////*/
 @media only screen and (max-width: 500px) {
+  .main-container p {
+    font-family:georgia, serif;
+    color:#381704;
+    font-size:14px;
+    font-weight: 500;
+    letter-spacing:0.1em;
+    line-height:200%;
+    padding-top:11px;
+  }
+  .main-container h1 {
+    font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: 1.75em;
+    letter-spacing: .2em;
+    line-height: 1.1em;
+    margin:0px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .top-front-page {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
   .top-front-page h3 {
     font-size: 2.4em;
     margin-top: 35%;
   }
   .top-front-page h1  {
-    font-size: 3.2em;
+    font-size: 2.4em;
   }
   .container-full-width {
     margin-top: -50px;
@@ -406,6 +439,9 @@ section.module.parallax {
     margin: 30px 0 30px 30px;
     top: 60%;
   }
+  .img__description p {
+    color: #fff;
+  }
   .schedule {
     margin-left: 20px;
   }
@@ -432,12 +468,21 @@ section.module.parallax {
   section.module.parallax {
     background-attachment:initial;
   }
-  .sensei-team img {
-    /*margin: 30px auto;
-    width: 100%;
-    height: auto;*/
-    border: 4px solid grey;
+  .img__description {
+    
+    top: 45%;
+    
   }
+  .img__description h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  .img__description p {
+    line-height: 19px;
+    text-align: center;
+    font-size: 0.9em;
+  }
+
 
 }
 
