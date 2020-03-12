@@ -354,10 +354,13 @@ section.module.parallax {
 /*/////////////////////////////////////////////
 ///////////////////////////////////////////////*/
 @media only screen and (max-width: 500px) {
+  html {
+    overflow-x: hidden;
+  }
   .main-container p {
     font-family:georgia, serif;
     color:#381704;
-    font-size:14px;
+    font-size:15px;
     font-weight: 500;
     letter-spacing:0.1em;
     line-height:200%;
@@ -373,7 +376,10 @@ section.module.parallax {
     text-align: center;
     text-transform: uppercase;
   }
-  
+  .main-container h3 {
+    font-size: 1.4em;
+    margin-left: 20px;
+  }
   .top-front-page {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -415,11 +421,11 @@ section.module.parallax {
     margin: 0 auto;
   }
   .founder-of-judo p {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
   .autor p{
-    font-size: 0.9em;
-    margin-right: 20px;
+    font-size: 0.8em;
+    margin-right: 26px;
   }
   .judo-definition img {
     margin-bottom: 30px;
