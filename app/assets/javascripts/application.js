@@ -20,8 +20,9 @@
 //= require_tree .
 // require turbolinks
 
+
 // for change nav bg on scroll
-$(document).ready(function(){       
+$(function(){       
    var scroll_start = 0;
    var startchange = $('.top-front-page');
    var offset = startchange.offset();
@@ -35,6 +36,7 @@ $(document).ready(function(){
             // $('.navbar-default').css('background-color', 'transparent');
             $('.navbar-inverse').css('background-color', 'rgba(246, 233, 233, 0.4');
             $(".dropdown-menu").css('background-color', 'rgba(234, 234, 234, 0.9)');
+
          }
 
          if ($(document).scrollTop() > 50) {

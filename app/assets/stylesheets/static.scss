@@ -1,3 +1,6 @@
+/*body, html {
+    overflow-x: hidden;
+  }*/
 .well {
   margin: 20px auto;
   -webkit-box-shadow: 4px 3px 11px -2px rgba(0,0,0,0.75);
@@ -354,13 +357,13 @@ section.module.parallax {
 /*/////////////////////////////////////////////
 ///////////////////////////////////////////////*/
 @media only screen and (max-width: 500px) {
-  html {
+  /*body, html {
     overflow-x: hidden;
-  }
+  }*/
   .main-container p {
     font-family:georgia, serif;
     color:#381704;
-    font-size:15px;
+    font-size:16px;
     font-weight: 500;
     letter-spacing:0.1em;
     line-height:200%;
