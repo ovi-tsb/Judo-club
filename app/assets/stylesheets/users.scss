@@ -103,7 +103,7 @@ input:checked + .slider:before {
 
 .user-front-page {
   max-height: 10px;
-  margin-top: -220px;
+  margin-top: -240px;
   background-color: red;
 }
 .user-front-page h2 {
@@ -111,4 +111,34 @@ input:checked + .slider:before {
 }
 .switch {
   margin-top: 5px;
+}
+
+/*/////////////////////////////////////////////
+///////////////////////////////////////////////*/
+/*/////////////////////////////////////////////
+///////////////////////////////////////////////*/
+/*/////////////////////////////////////////////
+///////////////////////////////////////////////*/
+@media only screen and (max-width: 500px) {
+  .simple_form{
+    max-width: 92% !important;
+    margin: 0 auto !important;
+    margin-top: -30px !important;
+  }
+  .user-front-page {
+    margin-top: -240px;
+  }
+  .user-front-page h2 {
+    padding-top: 120px;
+  }
+  .user-front-page >.container-full-width > .main-container {
+    padding: 20px;
+  }
+  .user-front-page >.container-full-width > .main-container p {
+    text-align: justify;
+  }
+  .user-front-page >.container-full-width > .main-container {
+    max-height: 100vh !important;
+    min-height: 1000px;
+  }
 }

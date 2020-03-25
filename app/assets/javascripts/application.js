@@ -75,10 +75,12 @@ $(document).ready(function(){
      $(document).scroll(function() { 
         scroll_start = $(this).scrollTop();
         if(scroll_start > offset.top) {
-            $(".navbar-default").css('background-color', '#f0f0f0');
+            $(".navbar-inverse").css('background-color', '#f0f0f0');
+            $(".dropdown-menu").css('background-color', '#f0f0f0');
          } else {
             // $('.navbar-default').css('background-color', 'transparent');
-            $('.navbar-default').css('background-color', 'rgba(246, 233, 233, 0.4');
+            $('.navbar-inverse').css('background-color', 'rgba(246, 233, 233, 0.4');
+            $(".dropdown-menu").css('background-color', 'rgba(234, 234, 234, 0.9)');
          }
 
          if ($(document).scrollTop() > 50) {

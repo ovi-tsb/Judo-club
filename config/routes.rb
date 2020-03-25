@@ -12,7 +12,8 @@ Rails.application.routes.draw do
       root :to => 'users#index'
       get 'static/homepage' => 'static#homepage'
     end
-    
+   
+  get 'static/homepage' => 'static#homepage' 
   resources :posts
   resources :members
   devise_for :users

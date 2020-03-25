@@ -7,33 +7,33 @@
   <% end %>
 
   <div class="form-style-10 form-post">
-  <h1>Edit Story<span></span></h1>
-  <form>
-      <div class="section"><span>1</span>Title</div>
-      <div class="inner-wrap">
-        <label>Title <%= f.text_field :title, class: "form-control" %> </label>
-      </div>
+    <h1>Edit Story</h1>
+    <form>
+        <div class="section"><span>1</span>Title</div>
+        <div class="inner-wrap">
+          <label>Title <%= f.text_field :title, class: "form-control" %> </label>
+        </div>
 
-      <div class="section"><span>2</span>Title</div>
-      <div class="inner-wrap">
-        <label>Image <%= f.file_field :postimage, class: "form-control" %> </label>
-        <p class="post_image">
-          <%= image_tag(@post.postimage_url) if @post.postimage? %>
-        </p>
-        <%= f.check_box :remove_postimage %>
-        <%= f.label :remove_postimage, "remove image" %>
-      </div>
+        <div class="section"><span>2</span>Title</div>
+        <div class="inner-wrap">
+          <label>Image <%= f.file_field :postimage, class: "form-control" %> </label>
+          <p class="post_image">
+            <%= image_tag(@post.postimage_url) if @post.postimage? %>
+          </p>
+          <%= f.check_box :remove_postimage %>
+          <%= f.label :remove_postimage, "remove image" %>
+        </div>
 
-      <div class="section"><span>3</span>Details</div>
-      <div class="inner-wrap">
-        <label>Details <%= f.text_area :details, class: "form-control" %></label>
-      </div>
-      
-      <div class="button-section">
-       <%= f.submit 'Save', class: 'btn btn-primary btn-block' %>
-      </div>
-      
-  </form>
+        <div class="section"><span>3</span>Details</div>
+        <div class="inner-wrap">
+          <label>Details <%= f.text_area :details, class: "form-control" %></label>
+        </div>
+        
+        <div class="button-section">
+         <%= f.submit 'Save', class: 'btn btn-primary btn-block' %>
+        </div>
+        
+    </form>
   <br>
   <%= link_to 'Back', :back, class: 'btn  btn-default btn-sm' %>
   </div>
