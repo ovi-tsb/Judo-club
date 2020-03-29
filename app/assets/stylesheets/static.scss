@@ -315,11 +315,11 @@ section.module.parallax {
     margin-top: -120px;
   }
   .top-front-page h3 {
-    font-size: 3em;
-    margin-top: 30%;
+    font-size: 2.5em;
+    margin-top: 10%;
   }
   .top-front-page h1  {
-    font-size: 4em;
+    font-size: 3.5em;
   }
   .about-club, .main-container {
     min-width: 100% !important;
@@ -442,10 +442,14 @@ section.module.parallax {
   }
   .top-front-page h3 {
     font-size: 2.4em;
-    margin-top: 35%;
+    /*margin-top: 25%;*/
+    height: 100vw;
+    margin-top: calc(-10vw + 50%);
   }
   .top-front-page h1  {
     font-size: 2.4em;
+    height: 100vw;
+    margin-top: calc(-90vw + 10%);
   }
   .container-full-width {
     margin-top: -50px;
