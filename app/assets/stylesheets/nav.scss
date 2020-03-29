@@ -144,6 +144,10 @@ nav.navbar.shrink {
   .navbar-inverse {
     width: 100% !important;
   }
+  .navbar-collapse {
+    overflow-y: auto !important;
+    max-height: 85vh !important;
+  }
   .navbar-toggle {
     margin-top: 15px;
     border: 1px solid #B1C5C4 !important;
