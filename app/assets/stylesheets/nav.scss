@@ -115,7 +115,28 @@ nav.navbar.shrink {
 /* ----------  -----------------  --------------- */
 /* ----------  -----------------  --------------- */
 
-@media only screen and (min-width: 768px) and (max-width: 990px) {
+@media only screen and (min-width: 768px) and (max-width: 996px) {
+  .navbar-inverse {
+    ul {
+      margin-right: -50px;
+    }
+    ul li a {
+      font-size: 0.93em;
+    }
+  }
+  .members-index {
+    margin-top: -280px;
+  }
+  .main-container h1 {
+    margin-top: 120px;
+  }
+  .main-container {
+    width: 100% !important;
+  }
+  .edit-member {
+    min-width: 500px !important;
+    margin-top: 20px;
+  }
 
 }
 
@@ -154,10 +175,10 @@ nav.navbar.shrink {
     margin-top: 13px !important;
 
     position: absolute;
-          top: 0;
-          bottom: 0;
-          background-color: #ddd;
-          min-height: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: #ddd;
+    min-height: 100%;
   }
   .navbar-collapse li a{
     line-height: 30px !important;
@@ -186,8 +207,15 @@ nav.navbar.shrink {
 }
 
 @media only screen and (max-width: 500px) {
-
- 
+  .navbar-collapse {
+    /*position: relative !important;*/
+    /*max-height: 90vh !important;*/
+    overflow-y: auto !important;
+    max-height: 85vh !important;
+  }
+  /*html {
+    overflow:hidden;
+  }*/
 
 }
 /* ----------  @media only screen  --------------- */

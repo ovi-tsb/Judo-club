@@ -3,16 +3,16 @@
     <td>
       <%= "#{index + 1}" %>
     </td>
-    <td class='hidden-xs'>
+    <td class='hide-element'>
       <%= member.created_at.strftime("%b %d, %Y") %>
     </td>
-    <td class='hidden-xs'>
+    <td class=''>
       <%= member.try(:user).try(:first_name).capitalize %> <%= member.try(:user).try(:last_name).capitalize %>
     </td>
-    <td class='hidden-xs'>
+    <td class=''>
       <%= member.first_name.capitalize %> <%= member.last_name.capitalize %>
     </td>
-    <td>
+    <td class='hide-element'>
       <% today ||= Date.current %>
       <% age = today.year - member.birth_year %>
       <%= age  %>
@@ -24,18 +24,18 @@
         <span style="color:green"><%= member.pay_status %></span>
       </td>
     <% else %>
-      <td class='hidden-xs'>  
+      <td class=''>  
         <span style="color:red"><%= member.pay_status %></span>
       </td>
     <% end %>
     
 
     <% if member.status == 'active' %>
-      <td>  
+      <td class="hide-element">  
         <span style="color:green"><%= member.status %></span>
       </td>
     <% else %>
-      <td class='hidden-xs'>  
+      <td class='hide-element'>  
         <span style="color:red"><%= member.status %></span>
       </td>
     <% end %>

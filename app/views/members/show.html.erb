@@ -1,3 +1,4 @@
+<div class="top-posts"></div>
 <div class="edit-member">
   <%= link_to "", members_path, class: 'glyphicon glyphicon-remove close-window' %> 
   <h2>CASH or POS Payment</h2>
@@ -8,19 +9,19 @@
   <% @member.each do |member| %>
     <% if member.user_id == member.user_id && member.status == "active" %>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-xs-3 col-sm-3 col-md-6">
           <%= member.first_name.capitalize %> <%= member.last_name.capitalize %>
         </div>
-        <div class="col-md-1">
+        <div class="col-xs-2 col-sm-3 col-md-1">
           <!-- <= label_tag :checkbox, "checkbox" %>     -->
           <%= check_box_tag("name", "value", true, disabled: true, class: "checkbox") %>
         </div>
-        <div class="col-md-2">
+        <div class="col-xs-3 col-sm-3 col-md-2">
           <span style="color:green; display: inline-block;">
             <%= member.status %>
           </span>
         </div>
-        <div class="col-md-3">
+        <div class="col-xs-3col-sm-3 col-md-3">
           <%= link_to "", edit_member_path(member), id: "edit_#{member.id}", class: 'glyphicon glyphicon-pencil index-icons' %>
         </div>
       </div>

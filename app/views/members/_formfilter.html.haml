@@ -1,7 +1,7 @@
 .well.filter_well  
   = form_for_filterrific( @filterrific, url: members_path, html: { id: 'filterrific-no-ajax-auto-submit' } ) do |f|
     .row.form-group
-      .col-md-2.col-sm-2.col-xs-6.chardin_box{ :'data-position' => 'top', :'data-intro' => 'Search by first name, last name, or email.' }
+      .col-md-2.col-sm-3.col-xs-6.chardin_box{ :'data-position' => 'top', :'data-intro' => 'Search by first name, last name, or email.' }
         %label Search by Name
         = f.text_field :search_query, class: ' form-control'
       
@@ -13,7 +13,7 @@
         %label Payment
         = f.select(:with_pay_status, @filterrific.select_options[:with_pay_status], { :include_blank => '- Any -' },{ :class => 'form-control' })
       ///////////////                         
-      .col-md-3.col-xs-6.chardin_box{ :'data-position' => 'top', :'data-intro' => 'Change the sorting.' }
+      .col-sm-4.col-md-3.col-xs-6.chardin_box{ :'data-position' => 'top', :'data-intro' => 'Change the sorting.' }
         %label Sorted by
         = f.select :sorted_by, @filterrific.select_options[:sorted_by],{},{ :class => 'form-control ' } 
       //////////

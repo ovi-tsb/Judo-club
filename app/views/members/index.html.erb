@@ -1,4 +1,4 @@
-<div class="top-posts"></div>
+<div class="top-posts members-index"></div>
 <% if current_user.try(:type) == 'AdminUser' %>
   <div class="container-full-width">
     <div class="main-container">
@@ -20,7 +20,7 @@
               <th>
                 #
               </th>
-              <th class='hidden-xs'>
+              <th class='hide-element'>
                 Created
               </th>
               <!-- <th class='hidden-xs'>
@@ -35,20 +35,20 @@
               <th>
                 Member Name
               </th>
-              <th class='hidden-xs'>
+              <th class='hide-element'>
                 Age
               </th>
               <th>
-                Pay Status
+                Paid
               </th>
-              <th>
+              <th class="hide-element">
                 Status
               </th>
               <th>
                 Edit
               </th>
               <th>
-                CASH/POS
+                CASH / POS
               </th>
             </tr>
           </thead>
