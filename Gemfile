@@ -19,7 +19,7 @@ gem 'gritter', '~> 1.2'
 gem "administrate", ">= 0.13.0"
 gem 'bourbon'
 gem 'cocoon', '~> 1.2', '>= 1.2.14'
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave', '~> 1.3.2'
 # gem 'rmagick', '~> 4.0'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'fog-aws'
